@@ -1,0 +1,23 @@
+module "storageaccount" {
+  source                                     = "../../Terraform_Modules/AzureStorageAccount"
+  resource_group_name                        = var.usr_resource_group_name
+  location                                   = var.usr_location
+  environment                                = var.usr_environment
+  storage_account_name                       = var.usr_storage_account_name
+  storage_account_tier                       = var.usr_storage_account_tier
+  storage_account_kind                       = var.usr_storage_account_kind
+  storage_replication_type                   = var.usr_storage_replication_type
+  storage_account_enable_https_traffic_only  = var.usr_storage_account_enable_https_traffic_only
+  storage_account_access_tier                = var.usr_storage_account_access_tier
+  storage_account_tls_version                = var.usr_storage_account_tls_version
+  tags                                       = var.usr_tags
+  create_storage_container                   = var.usr_create_storage_container
+  storage_account_blob_container_name        = var.usr_storage_account_blob_container_name
+  create_storage_queue                       = var.usr_create_storage_queue
+  storage_account_queue_name                 = var.usr_storage_account_queue_name
+  create_storage_table                       = var.usr_create_storage_table
+  storage_account_table_name                 = var.usr_storage_account_table_name
+  create_storage_share                       = var.usr_create_storage_share
+  storage_account_share_name                 = var.usr_storage_account_share_name
+  storage_account_file_share_quota           = var.usr_storage_account_file_share_quota
+}
